@@ -17,6 +17,7 @@ const messaging = firebase.messaging();
 
 messaging.onBackgroundMessage((message) => {
   return self.showNotification(
+    message.notification.title,
     message.notification
   );
 });
